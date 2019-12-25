@@ -102,40 +102,40 @@ get_info=()=>{
   }
   render() {
 
-    if(this.state.show){
-      return (
-          <SafeAreaView style={{flex:1,alignItems:'center'}}>
-        <ActivityIndicator  size={'large'} style={{marginTop:200}}/>
-         <Text style={{marginTop:10,color:'#909497'}}>请稍等 正在加载...</Text>
-          </SafeAreaView>
-      )   
-    }
+  //   if(this.state.show){
+  //     return (
+  //         <SafeAreaView style={{flex:1,alignItems:'center'}}>
+  //       <ActivityIndicator  size={'large'} style={{marginTop:200}}/>
+  //        <Text style={{marginTop:10,color:'#909497'}}>请稍等 正在加载...</Text>
+  //         </SafeAreaView>
+  //     )   
+  //   }
 
-    if(this.state.aa==1){
-      return(
-          <SafeAreaView style={{flex:1}}>
-          {
-           this.state.progress ==0||this.state.progress<0.5?
-          <ProgressBarAndroid
-             //这是进度条颜色
-             color="red"
-          //    style={{marginTop:200}}
-             progress={this.state.progress}
-             styleAttr={'Horizontal'}
-             />
-             :
-             null
-             }
+  //   if(this.state.aa==1){
+  //     return(
+  //         <SafeAreaView style={{flex:1}}>
+  //         {
+  //          this.state.progress ==0||this.state.progress<0.5?
+  //         <ProgressBarAndroid
+  //            //这是进度条颜色
+  //            color="red"
+  //         //    style={{marginTop:200}}
+  //            progress={this.state.progress}
+  //            styleAttr={'Horizontal'}
+  //            />
+  //            :
+  //            null
+  //            }
 
-          <WebView source={{uri:this.state.bb}} 
-           //设置进度 progress值为0～1
-           onLoadProgress={({nativeEvent}) => this.setState(
-             {progress: nativeEvent.progress}
-         )}                  
-          />
-          </SafeAreaView>
-      )
-  }
+  //         <WebView source={{uri:this.state.bb}} 
+  //          //设置进度 progress值为0～1
+  //          onLoadProgress={({nativeEvent}) => this.setState(
+  //            {progress: nativeEvent.progress}
+  //        )}                  
+  //         />
+  //         </SafeAreaView>
+  //     )
+  // }
 
     return (
       <Provider {...store}>
